@@ -1,0 +1,44 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: arial;
+}
+
+ul li {
+    list-style: none;
+    padding: 0;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #262626;
+    position: relative;
+}
+
+ul li a:before {
+    content: '';
+    width: 0;
+    height: 5px;
+    background: #00bcd4;
+    position: absolute;
+    top: 100%;
+    transition: .5s;
+    left: 0
+}
+
+ul li:hover a:before {
+    width: 50%;
+    transform: translateX(100%);
+}
